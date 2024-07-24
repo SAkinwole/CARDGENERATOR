@@ -34,7 +34,7 @@ namespace CARDGENERATOR.Services
 
             return BaseResponse<List<CardResponseModel>>.Success("Operation Successful", StatusCodes.Status200OK.ToString(), data: responseModels); 
         } 
-        public async Task<BaseResponse<CreationResponseDto>> GenerateCard(GenerateCardRequestModel model)
+        public async Task<BaseResponse<CreationResponseModel>> GenerateCard(GenerateCardRequestModel model)
         {
             var generatedCard = new Card
             {
@@ -51,7 +51,7 @@ namespace CARDGENERATOR.Services
             var result = await _cardRepository.Create(generatedCard);
 
 
-            return BaseResponse<CreationResponseDto>.Success("Operation Successful", StatusCodes.Status200OK.ToString(), new CreationResponseDto { Id = result.Id });
+            return BaseResponse<CreationResponseModel>.Success("Operation Successful", StatusCodes.Status200OK.ToString(), new CreationResponseModel { Id = result.Id });
         }
 
         public async Task<BaseResponse> UseCard(UseCardRequestModel model)

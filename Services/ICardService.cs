@@ -8,7 +8,7 @@ namespace CARDGENERATOR.Services
     {
         Task<BaseResponse> UseCard(UseCardRequestModel model);
         Task<BaseResponse<List<CardResponseModel>>> GetAllCards();
-        Task<BaseResponse<CreationResponseDto>> GenerateCard(GenerateCardRequestModel model);
+        Task<BaseResponse<CreationResponseModel>> GenerateCard(GenerateCardRequestModel model);
         Task<BaseResponse<PurchaseCardResponseModel>> PurchaseCard(PurchaseCardRequestModel model);
     }
 }

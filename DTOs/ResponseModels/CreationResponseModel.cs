@@ -1,6 +1,6 @@
 ﻿namespace CARDGENERATOR.DTOs.ResponseModels
 {
-    public class CreationResponseDto
+    public class CreationResponseModel
     {
         public Guid Id { get; set; }
 

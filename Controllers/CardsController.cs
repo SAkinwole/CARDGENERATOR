@@ -17,7 +17,7 @@ namespace CARDGENERATOR.Controllers
         }
 
         
-        [HttpGet("GetAllCards")]
+        [HttpGet("getall")]
         public async Task<IActionResult> GetAll()
         {
             var response = await _cardService.GetAllCards();
